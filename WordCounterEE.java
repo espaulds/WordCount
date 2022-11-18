@@ -15,9 +15,8 @@ public class WordCounterEE{
 //return index of largest value in count; overall return word at that index
 
     public static void main(String[] args) throws FileNotFoundException{
-        //String filename args[0];
-        //countWords(filename);
-        ArrayList<String> allWords = parseList("/Users/etrauber/Desktop/CSSeminar/Unit2/twilight.txt");
+        String filename = args[0];
+        ArrayList<String> allWords = parseList(filename);
         ArrayList<String> noDuplicates = noDuplicates(allWords);
         ArrayList<Integer> count = counts(allWords);
         
