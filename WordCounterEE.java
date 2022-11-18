@@ -25,16 +25,25 @@ public class WordCounterEE{
     }
 
     public static ArrayList<String> parseList(String pathname) throws FileNotFoundException{
+        //create new scanner to read in file
         Scanner sc = new Scanner(new File(pathname));
+        //initalize empty arraylist to hold all the worlds in the file
         ArrayList<String> words = new ArrayList<>();
+        //loop that will run until there are no more lines left in the file
         while(sc.hasNextLine()){
+            //create a variable to hold the specific line
             String line = sc.nextLine();
+            //create an array with every individual word in the line 
             String[] arrLine = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+            //create arraylist of array of line
             ArrayList<String> alOfLine = new ArrayList<>(Arrays.asList(arrLine));
+            //individual scanner to read in a string of each line
             Scanner scn = new Scanner(line);
+            //while there is another word in the line, add the word to the broad words arraylist
             while(scn.hasNext()){
                 words.add(scn.next());
             }
+            scn.close();
         }
         sc.close();
         return words;
@@ -98,10 +107,7 @@ public class WordCounterEE{
                 index = i;
             }
         }
-<<<<<<< HEAD
-=======
         //word to be returned
->>>>>>> fc297a0b6c0e29f2552503b614d7e77253e06d85
         String word = noDuplicates.get(index);
         return word;
     }
