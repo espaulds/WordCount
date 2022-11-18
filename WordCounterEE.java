@@ -94,6 +94,7 @@ public class WordCounterEE{
                 index = i;
             }
         }
-        String word = noDuplicates.get(index);return word;
+        String word = noDuplicates.get(index);
+        return word;
     }
 }
