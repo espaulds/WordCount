@@ -85,15 +85,23 @@ public class WordCounterEE{
         return counts;
     }
 
+    //method to go through values in counts AL, get the index, and return the value at that index in noDuplicates AL (the most common word)
     public static String getWord(ArrayList<Integer> counts, ArrayList<String> noDuplicates){
+        //comparison variable
         int largestNum = 0;
+        //index that will be used to get returned word
         int index = 0;
         for(int i = 0; i<counts.size(); i++){
+            //compares value in counts to the current largest value
             if(counts.get(i) > largestNum){
                 largestNum = counts.get(i);
                 index = i;
             }
         }
+<<<<<<< HEAD
+=======
+        //word to be returned
+>>>>>>> fc297a0b6c0e29f2552503b614d7e77253e06d85
         String word = noDuplicates.get(index);
         return word;
     }
