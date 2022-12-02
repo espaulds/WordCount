@@ -20,7 +20,7 @@ public class WordCounterEE{
         ArrayList<String> noDuplicates = noDuplicates(allWords);
         ArrayList<Integer> count = counts(allWords);
         
-        System.out.println("the most used word in Twilight is: " + getWord(count, noDuplicates));
+        System.out.println("the most used word in " + filename + " is: " + getWord(count, noDuplicates));
     }
 
     public static ArrayList<String> parseList(String pathname) throws FileNotFoundException{
